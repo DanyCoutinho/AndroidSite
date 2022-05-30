@@ -30,6 +30,10 @@ body {
     font-family: var(--fonte-padrao);
 }
 
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
 header {
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
     min-height: 150px;
@@ -40,6 +44,7 @@ header {
 header > h1 {
     color: white;
     font-family: var(--fonte-destaque);
+    font-weight: normal;
     margin-bottom: 20px;
     text-shadow: 2px 2px 0x rgba(0, 0, 0, 0.2);
 }
@@ -53,6 +58,7 @@ header > p {
     /* Ao colocar max-width torna o parágrafo num bloco, por isso é necessário colocar um margin para centralizar */
     max-width: 600px;
     margin: auto;
+    margin-bottom: 20px;
 
     padding-right: 10px;
     padding-left: 10px;
@@ -65,7 +71,7 @@ nav {
 }
 
 nav > a {
-    color: white;
+    color: var(--cor0);
     padding: 10px;
     text-decoration: none;
     font-weight: bold;
@@ -120,12 +126,15 @@ main a:hover {
 main h1 {
     color: var(--cor5);
     font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
 }
 
 main h2 {
     font-family: var(--fonte-android);
     color: var(--cor5);
     font-size: 1.3em;
+    font-weight: normal;
     background-image: linear-gradient(to right, var(--cor0), transparent);
     text-indent: 8px;
 }
@@ -141,7 +150,58 @@ main img.pequena {
     margin: auto;
 }
 
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 90%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 5px;
+    margin: -10px -10px 0 -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul {
+    list-style-position: inside;
+    list-style-type: '\2714';
+    columns: 2;
+}
+
 footer {
     background-color: var(--cor5);
     color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
 }
